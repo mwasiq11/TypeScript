@@ -38,13 +38,46 @@
 // function abcd(a:Value) {
 // }
 // abcd(12)
-class Device {
-    constructor(name, cateogry, fault) {
-        this.name = name;
-        this.cateogry = cateogry;
-        this.fault = fault;
+// class Device {
+//     constructor(public name: string, public cateogry: string, public fault: boolean) {
+//     }
+// }
+// let d1 = new Device("Computer", "Digital_device", false)
+// d1.fault = true
+// let d2 = new Device("laptop", "digital", true)
+// extend//
+// class Device {
+//     constructor(public name: string, public cateogry: string, public fault: boolean) {
+//     }
+// }
+// class phone extends Device {
+//     constructor(name: string, cateogry: string, fault: boolean, public camera: boolean) {
+//         super(name, cateogry, fault);
+//     }
+// }
+// let d1 = new Device("Computer", "Digital_device", false)
+// console.log(d1);
+// d1.fault = true
+// let d2 = new Device("laptop", "digital", true)
+// getter and setter//
+class User {
+    constructor(_name, _age) {
+        this._name = _name;
+        this._age = _age;
+    }
+    // Getter//
+    get name() {
+        return this._name;
+    }
+    get age() {
+        return this._age;
+    }
+    //Setter//
+    set name(Value) {
+        this._name = Value;
+    }
+    set age(Value) {
+        this._age = Value;
     }
 }
-let d1 = new Device("Computer", "Digital_device", false);
-d1.fault = true;
-let d2 = new Device("laptop", "digital", true);
+let u1 = new User("muhammad", 23);
