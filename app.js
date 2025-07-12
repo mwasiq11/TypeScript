@@ -1,9 +1,50 @@
 "use strict";
 // console.log("Hello, TypeScript!");
 // // Array//
-function data(obj) {
+// let arr:number[]=[1, 2, 3, 4, 5];
+// console.log(arr);
+// // Tuple//
+// let tuple:[String,number]=["hello",12];
+// console.log(tuple);
+//Enums//
+// enum UserRoles {
+//     admin = "admin",
+//     super_Admin = "super_Admin",
+//     manager = "manager",
+// }
+// console.log(UserRoles.admin);
+// enum Status {
+//     aboundend = "500",
+//     notFound = "404",
+//     Valid = "200"
+// }
+// console.log(Status.Valid);
+// interface//
+// interface User{
+//     name:string,
+//     id:number,
+//     position:String,
+// }
+// interface Admin extends User{
+//     admin:true,
+//     Panel_authority:true,
+//     Taxation_authority:false,
+// }
+// function data(obj:User){
+// }
+// console.log(data({name:"muhammadwasiq",id:12,position:"manager"}));
+// // Type Aliases
+// type Value=number|string
+// function abcd(a:Value) {
+// }
+// abcd(12)
+class Device {
+    constructor(name, cateogry, fault) {
+        this.name = name;
+        this.cateogry = cateogry;
+        this.fault = fault;
+    }
 }
-console.log(data({ name: "muhammadwasiq", id: 12, position: "manager" }));
-function abcd(a) {
-}
-abcd(12);
+let d1 = new Device("Computer", "Digital_device", false);
+d1.fault = true;
+let d2 = new Device("laptop", "digital", true);
