@@ -85,33 +85,88 @@
 
 // getter and setter//
 
-class User {
-    constructor(public _name: string, public _age: number) {
+// class User {
+//     constructor(public _name: string, public _age: number) {
 
-    }
+//     }
 
-    // Getter//
-    get name() {
-        return this._name
+//     // Getter//
+//     get name() {
+//         return this._name
 
-    }
-    get age() {
-        return this._age
-    }
+//     }
+//     get age() {
+//         return this._age
+//     }
 
-    //Setter//
-    set name(Value: string) {
-        this._name = Value
-    }
-    set age(Value: number) {
-        this._age = Value
+//     //Setter//
+//     set name(Value: string) {
+//         this._name = Value
+//     }
+//     set age(Value: number) {
+//         this._age = Value
 
-    }
+//     }
 
+// }
+
+// let u1 = new User("muhammad", 23);
+
+// Static//
+
+// class User{
+//    static No_oFDeatils=1
+
+//    static getRandomNumber(){
+//     return Math.random()
+//    }
+// }
+
+// function abcd(name: string, age: number, cb: (cb: string) => void) {
+//    cb("ali")
+// }
+// abcd("ali", 34, (arg: string) => {
+//    console.log(arg);
+
+
+// })
+
+// Generics//
+
+// function abcd<T>(a: T, b: string, c: number, d: boolean) {
+//    console.log(a)
+// }
+
+// abcd(2323.23, "ali", 23, true)
+
+// function hello<T>(a: T, b: T): T {
+//    return "hey" as T ;
+// }
+// let b1=hello("abcd", "asd")
+// console.log(b1);
+
+// instance of//
+
+class Computer {
+   compInfo() {
+      console.log("computer information");
+   }
 }
 
-let u1 = new User("muhammad", 23);
+class Mobile {
+   mobileInfo() {
+      console.log("mobile information");
+   }
+}
 
+let comp = new Computer()
+let mob = new Mobile()
 
-
-
+function checker(device: Computer | Mobile) {
+   if (device instanceof Computer) {
+      device.compInfo()
+   }
+   else if (device instanceof Mobile) {
+      device.mobileInfo()
+   }
+}
